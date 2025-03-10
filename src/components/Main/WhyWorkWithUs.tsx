@@ -1,22 +1,25 @@
 import DescBlock from "./DescBlock";
+import imgPath1 from "../../assets/images/iconset4.png";
+import imgPath2 from "../../assets/images/iconset5.png";
+import imgPath3 from "../../assets/images/iconset6.png";
 
 const descs = [
   {
-    imgPath: "src/assets/images/iconset4.png",
+    imgPath: imgPath1,
     title: "Performance-Obsessed",
     description: `We don’t do “brand awareness.” We do profit.`,
     strong: "profit",
     altForImage: "Performance",
   },
   {
-    imgPath: "src/assets/images/iconset5.png",
+    imgPath: imgPath2,
     title: "Test. Optimize. Scale. Repeat",
     description: "Constant iteration for consistent, sustainable earnings.",
     strong: "consistent, sustainable earnings",
     altForImage: "Increasing Traffic",
   },
   {
-    imgPath: "src/assets/images/iconset6.png",
+    imgPath: imgPath3,
     title: "No BS, Just Results",
     description: "Your ROI is the only metric that matters",
     strong: "ROI only metric that matters",

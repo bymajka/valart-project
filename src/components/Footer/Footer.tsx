@@ -1,3 +1,5 @@
+import linkedInImg from "../../assets/images/svg/linkedIn.svg";
+
 const footerLinks = [
   {
     title: "© 2024 ValArt Ads. All Rights Reserved.",
@@ -25,11 +27,7 @@ const Footer = () => {
           {link.title}
         </a>
       ))}
-      <img
-        src="src/assets/images/svg/linkedIn.svg"
-        alt="LinkedIn"
-        className="cursor-pointer"
-      />
+      <img src={linkedInImg} alt="LinkedIn" className="cursor-pointer" />
     </footer>
   );
 };

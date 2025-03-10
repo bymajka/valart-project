@@ -1,9 +1,11 @@
+import imgLogo from "../../assets/images/welcome-logo.png";
+
 const CTA = () => {
   return (
     <section className="h-[793px] bg-[url('./assets/images/welcome-bg-image.png')] bg-no-repeat bg-cover bg-center">
       <div className="backdrop-blur-[10px] h-full">
         <img
-          src="src\assets\images\welcome-logo.png"
+          src={imgLogo}
           className="w-full h-[683px] relative -top-[25px]"
           alt="Welcome Logo"
         />

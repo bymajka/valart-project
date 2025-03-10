@@ -1,22 +1,25 @@
 import DescBlock from "./DescBlock";
+import imgPath1 from "../../assets/images/iconset1.png";
+import imgPath2 from "../../assets/images/iconset2.png";
+import imgPath3 from "../../assets/images/iconset3.png";
 
 const descs = [
   {
-    imgPath: "src/assets/images/iconset1.png",
+    imgPath: imgPath1,
     title: "We Buy, You Earn",
     description: "High-converting paid traffic that keeps your revenue flowing",
     strong: "keeps your revenue flowing",
     altForImage: "Increasing Traffic",
   },
   {
-    imgPath: "src/assets/images/iconset2.png",
+    imgPath: imgPath2,
     title: "Data > Gut Feeling",
     description: "Every ad, every bid, every campaign is optimized for max ROI",
     strong: "optimized for max ROI",
     altForImage: "Data Driven Optimization",
   },
   {
-    imgPath: "src/assets/images/iconset3.png",
+    imgPath: imgPath3,
     title: "Traffic That Prints Money",
     description: "If it scales, we run it. Simple as that.",
     strong: "scales run it",

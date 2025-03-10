@@ -1,5 +1,6 @@
 import WhatWeDo from "./WhatWeDo";
 import WhyWorkWithUs from "./WhyWorkWithUs";
+import backgroundImage from "../../assets/images/background_image.png";
 
 const MainContent = () => {
   return (
@@ -19,7 +20,7 @@ const MainContent = () => {
       <WhyWorkWithUs />
 
       <img
-        src="src\assets\images\background_image.png"
+        src={backgroundImage}
         alt="Valart"
         className="absolute right-0 w-[500px] h-[500px] bottom-[-150px]"
       />
