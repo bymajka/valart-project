@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-21: #fded88;
+  --color-gold-22: #f8c346;
+  --color-black-bg: #1a1d20;
+
+  --color-angular-gradient-1: #e8dca5;
+  --color-angular-gradient-2: #dbcc97;
+  --color-angular-gradient-3: #ffcd7b;
+  --color-angular-gradient-4: #e3cb79;
+  --color-angular-gradient-5: #d5aa4d;
+  --color-angular-gradient-6: #e9ddab;
+
+  --font-poppins-semibold: Poppins-SemiBold;
+  --font-poppins-light: Poppins-Light;
+  --font-montserrat-extrabold: Montserrat-ExtraBold;
+  --font-montserrat-medium: Montserrat-Medium;
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("./assets/fonts/Poppins-SemiBold.ttf"), "truetype";
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins-Light;
+  src: url("./assets/fonts/Poppins-Light.ttf"), "truetype";
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat-ExtraBold;
+  src: url("./assets/fonts/Montserrat-ExtraBold.ttf"), "truetype";
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("./assets/fonts/Montserrat-Medium.ttf"), "truetype";
+  font-weight: 500;
+  font-style: normal;
+}
