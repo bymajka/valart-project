@@ -1,6 +1,7 @@
 import WhatWeDo from "./WhatWeDo";
 import WhyWorkWithUs from "./WhyWorkWithUs";
-import backgroundImage from "../../assets/images/background_image.png";
+// import backgroundImage from "../../assets/images/background_image.png";
+import { getImageUrl } from "../utils/ImageUtil";
 
 const MainContent = () => {
   return (
@@ -20,7 +21,7 @@ const MainContent = () => {
       <WhyWorkWithUs />
 
       <img
-        src={backgroundImage}
+        src={getImageUrl("background_image.png")}
         alt="Valart"
         className="absolute right-0 w-[293px] md:w-[500px] h-[293px] md:h-[500px] bottom-[-90px] md:bottom-[-150px]"
       />

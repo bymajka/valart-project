@@ -1,5 +1,7 @@
-import imgLogo from "../../assets/images/welcome-logo.png";
-import imgLogoSm from "../../assets/images/welcome-logo-sm.png";
+// import imgLogo from "../../assets/images/welcome-logo.png";
+// import imgLogoSm from "../../assets/images/welcome-logo-sm.png";
+
+import { getImageUrl } from "../utils/ImageUtil.ts";
 
 const smallScreenValue = 425;
 
@@ -9,13 +11,13 @@ const CTA = () => {
       <div className="backdrop-blur-[10px] h-full">
         {window.innerWidth >= smallScreenValue ? (
           <img
-            src={imgLogo}
+            src={getImageUrl("welcome-logo.png")}
             className="w-full h-[258px] md:h-[683px] relative top-[134px] md:-top-[25px]"
             alt="Welcome Logo"
           />
         ) : (
           <img
-            src={imgLogoSm}
+            src={getImageUrl("welcome-logo-sm.png")}
             className="w-[543px] h-[258px] relative top-[134px]"
           />
         )}

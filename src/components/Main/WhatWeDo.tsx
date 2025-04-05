@@ -1,25 +1,26 @@
 import DescBlock from "./DescBlock";
-import imgPath1 from "../../assets/images/iconset1.png";
-import imgPath2 from "../../assets/images/iconset2.png";
-import imgPath3 from "../../assets/images/iconset3.png";
+// import imgPath1 from "../../assets/images/iconset1.png";
+// import imgPath2 from "../../assets/images/iconset2.png";
+// import imgPath3 from "../../assets/images/iconset3.png";
+import { getImageUrl } from "../utils/ImageUtil";
 
 const descs = [
   {
-    imgPath: imgPath1,
+    imgPath: "iconset1.png",
     title: "We Buy, You Earn",
     description: "High-converting paid traffic that keeps your revenue flowing",
     strong: "keeps your revenue flowing",
     altForImage: "Increasing Traffic",
   },
   {
-    imgPath: imgPath2,
+    imgPath: "iconset2.png",
     title: "Data > Gut Feeling",
     description: "Every ad, every bid, every campaign is optimized for max ROI",
     strong: "optimized for max ROI",
     altForImage: "Data Driven Optimization",
   },
   {
-    imgPath: imgPath3,
+    imgPath: "iconset3.png",
     title: "Traffic That Prints Money",
     description: "If it scales, we run it. Simple as that.",
     strong: "scales run it",
@@ -35,7 +36,8 @@ const WhatWeDo = () => {
       <div className="flex flex-col md:flex-row md:w-[1176px] justify-between ml-auto mr-auto text-white gap-[24px] md:gap-[40px]">
         {descs.map((desc) => (
           <DescBlock
-            imgPath={desc.imgPath}
+            key={desc.title}
+            imgPath={getImageUrl(desc.imgPath)}
             title={desc.title}
             description={desc.description}
             strong={desc.strong}
