@@ -1,4 +1,5 @@
 import closeIcon from "../../assets/images/svg/close.svg";
+import { PropsInterfaces } from "../../utils/InterfacesAndTypes";
 import { useContext } from "react";
 import { modalContext } from "../../App";
 import LabelInput from "../CompositeComponents/LabelInput";
@@ -15,12 +16,7 @@ const schema = yup
   })
   .required();
 
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const ContactModal = ({ isOpen }: ModalProps) => {
+const ContactModal = ({ isOpen }: PropsInterfaces.Modal) => {
   const {
     register,
     handleSubmit,

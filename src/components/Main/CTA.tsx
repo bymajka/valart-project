@@ -1,7 +1,4 @@
-// import imgLogo from "../../assets/images/welcome-logo.png";
-// import imgLogoSm from "../../assets/images/welcome-logo-sm.png";
-
-import { getImageUrl } from "../utils/ImageUtil.ts";
+import { getImageUrl } from "../../utils/ImageUtil.ts";
 
 const smallScreenValue = 425;
 

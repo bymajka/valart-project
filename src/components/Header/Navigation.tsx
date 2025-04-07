@@ -1,4 +1,4 @@
-import { scrollPageTo } from "../utils/ScrollToPage.js";
+import { scrollPageTo } from "../../utils/ScrollToPage.js";
 import { useContext } from "react";
 import { modalContext } from "../../App.js";
 const Navigation = () => {

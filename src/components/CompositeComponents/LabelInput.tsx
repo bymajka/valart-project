@@ -1,13 +1,5 @@
 import closeIcon from "../../assets/images/svg/close.svg";
-interface LabelInputProps {
-  text: string;
-  type: string;
-  labelStyle?: string;
-  inputStyle?: string;
-  placeholderText?: string;
-  complexStyle?: string;
-  errorMessage?: string;
-}
+import { PropsInterfaces } from "../../utils/InterfacesAndTypes";
 
 const LabelInput = ({
   text,
@@ -18,7 +10,7 @@ const LabelInput = ({
   complexStyle,
   errorMessage,
   ...rest
-}: LabelInputProps) => {
+}: PropsInterfaces.LabelInput) => {
   return (
     <div className={`${complexStyle}`}>
       <label className={`${labelStyle}`}>{text}</label>

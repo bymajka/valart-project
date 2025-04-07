@@ -1,23 +1,5 @@
 import linkedInImg from "../../assets/images/svg/linkedIn.svg";
-
-const footerLinks = [
-  {
-    title: "© 2024 ValArt Ads. All Rights Reserved.",
-    link: "#",
-  },
-  {
-    title: "Privacy Policy",
-    link: "#",
-  },
-  {
-    title: "Terms of Service",
-    link: "#",
-  },
-  {
-    title: "support@valart-ads.com",
-    link: "#",
-  },
-];
+import { footerLinks } from "../../utils/constants";
 
 const Footer = () => {
   return (

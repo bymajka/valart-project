@@ -1,7 +1,6 @@
 import WhatWeDo from "./WhatWeDo";
 import WhyWorkWithUs from "./WhyWorkWithUs";
-// import backgroundImage from "../../assets/images/background_image.png";
-import { getImageUrl } from "../utils/ImageUtil";
+import { getImageUrl } from "../../utils/ImageUtil";
 
 const MainContent = () => {
   return (

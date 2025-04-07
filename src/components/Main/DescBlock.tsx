@@ -1,17 +1,11 @@
-interface DescProps {
-  imgPath: string;
-  title: string;
-  description: string;
-  strong: string;
-  altForImage: string;
-}
+import { PropsInterfaces } from "../../utils/InterfacesAndTypes";
 const DescBlock = ({
   imgPath,
   title,
   description,
   strong,
   altForImage,
-}: DescProps) => {
+}: PropsInterfaces.Desc) => {
   return (
     <div className="h-[303px] md:h-[291px] md:w-[354px] rounded-4xl bg-conic from-angular-gradient-1  via-angular-gradient-3 to-angular-gradient-6 flex justify-center items-center">
       <div className="w-[98%] h-[98%] rounded-4xl p-[40px] bg-black-bg">

@@ -4,3 +4,5 @@ export const scrollPageTo = (target) => {
     section.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+// useRef for scrolling
