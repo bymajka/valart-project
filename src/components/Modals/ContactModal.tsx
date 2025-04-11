@@ -1,11 +1,12 @@
 import closeIcon from "../../assets/images/svg/close.svg";
 import { PropsInterfaces } from "../../utils/InterfacesAndTypes";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { modalContext } from "../../App";
 import LabelInput from "../CompositeComponents/LabelInput";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import emailjs from "@emailjs/browser";
 
 const schema = yup
   .object({
@@ -27,12 +28,28 @@ const ContactModal = ({ isOpen }: PropsInterfaces.Modal) => {
     defaultValues: { firstName: "", lastName: "", email: "", message: "" },
   });
 
+  const formRef = useRef<HTMLFormElement>(null);
+
   if (!isOpen) {
     return null;
   }
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = async () => {
+    try {
+      const response = await emailjs.sendForm(
+        "service_8ntquk1",
+        "template_sjxkuzt",
+        formRef.current!,
+        "rSPatCvSj_nIgRfHM"
+      );
+
+      if (response.status === 200) {
+        alert("Thank you for your message!");
+        modalCtx(false);
+      }
+    } catch (error) {
+      console.log("Error sending email: ", error);
+    }
   };
 
   const modalCtx = useContext(modalContext);
@@ -45,6 +62,7 @@ const ContactModal = ({ isOpen }: PropsInterfaces.Modal) => {
       }}
     >
       <form
+        ref={formRef}
         onSubmit={handleSubmit(onSubmit)}
         className="bg-black-bg border-1 border-gold-21 p-[54px] rounded-4xl relative"
       >
@@ -55,6 +73,7 @@ const ContactModal = ({ isOpen }: PropsInterfaces.Modal) => {
           <div className="flex flex-row gap-6">
             <LabelInput
               {...register("firstName")}
+              name="firstName"
               text="First Name"
               type="text"
               complexStyle="flex flex-col gap-3 flex-1/2"
@@ -73,6 +92,7 @@ const ContactModal = ({ isOpen }: PropsInterfaces.Modal) => {
             />
             <LabelInput
               {...register("lastName")}
+              name="lastName"
               text="Last Name"
               type="text"
               complexStyle="flex flex-col gap-3 flex-1/2"
@@ -92,6 +112,7 @@ const ContactModal = ({ isOpen }: PropsInterfaces.Modal) => {
           </div>
           <LabelInput
             {...register("email")}
+            name="email"
             text="Email"
             type="text"
             complexStyle="flex flex-col gap-3"
@@ -113,7 +134,7 @@ const ContactModal = ({ isOpen }: PropsInterfaces.Modal) => {
           <label className="text-white font-poppins-medium">Your message</label>
           <textarea
             {...register("message")}
-            name="modal-text-area"
+            name="message"
             id="modal-text-area"
             placeholder="Enter your message here"
             className={`max-h-[164px] min-h-15 border-1 ${

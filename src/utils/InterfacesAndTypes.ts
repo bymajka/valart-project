@@ -13,6 +13,7 @@ export namespace PropsInterfaces {
   }
 
   export interface LabelInput {
+    name: string;
     text: string;
     type: string;
     labelStyle?: string;

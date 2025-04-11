@@ -2,6 +2,7 @@ import closeIcon from "../../assets/images/svg/close.svg";
 import { PropsInterfaces } from "../../utils/InterfacesAndTypes";
 
 const LabelInput = ({
+  name,
   text,
   type,
   labelStyle,
@@ -15,6 +16,7 @@ const LabelInput = ({
     <div className={`${complexStyle}`}>
       <label className={`${labelStyle}`}>{text}</label>
       <input
+        name={name}
         type={type}
         className={`${inputStyle}`}
         placeholder={`${placeholderText ? placeholderText : ""}`}
